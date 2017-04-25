@@ -17,12 +17,3 @@
                )
 end
 
-n = 709
-while n <= 898
-  Blog.create(
-    title: "あああ",
-    content: "hoge",
-    user_id: n
-  )
-  n = n + 1
-end
