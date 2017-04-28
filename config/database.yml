@@ -9,7 +9,7 @@ development:
   <<: *default
   database: achieve_development
 
-  
+
 test:
   <<: *default
   database: achieve_test
