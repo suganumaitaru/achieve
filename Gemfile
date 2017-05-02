@@ -33,9 +33,10 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development do
+group :development, :test do
   gem 'letter_opener_web'
-
+  gem 'pry-rails'
+  gem 'better_errors'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -52,3 +53,6 @@ gem 'rails_12factor', group: :production
 gem 'faker'
 gem 'rails_admin'
 gem 'cancan'
+gem 'pry-rails'
+gem 'better_errors'
+gem 'activeresource' 
