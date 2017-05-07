@@ -39,7 +39,7 @@ group :development, :test do
   gem 'better_errors'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
+  gem 'dotenv-rails'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -55,4 +55,9 @@ gem 'rails_admin'
 gem 'cancan'
 gem 'pry-rails'
 gem 'better_errors'
-gem 'activeresource' 
+gem 'activeresource'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'carrierwave'
+gem 'rmagick'
