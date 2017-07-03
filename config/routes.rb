@@ -22,13 +22,15 @@ Rails.application.routes.draw do
         end
     end
 
+    root 'top#index'
+
     resources :poems, only: [:index,:show]
 
     if Rails.env.development?
         mount LetterOpenerWeb::Engine, at: "/letter_opener"
 
 
-        root 'top#index'
+
     end
 
 
