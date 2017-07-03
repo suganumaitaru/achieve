@@ -15,6 +15,19 @@ class CommentsController < ApplicationController
         end
     end
 
+    def edit
+        @comment = Comment.find(params[:id])
+    end
+
+    def update
+        @comment = Comment.find(params[:id])
+        if @comment.update(comment_params)
+            redirect_to blog_path(@comment.blog.id), notice: "コメントを更新しました！"
+        else
+            render 'edit'
+        end
+    end
+
     def destroy
         # Blogをパラメータの値から探し出し,Blogに紐づくcommentsとしてbuildします。
         @comment = Comment.find(params[:id])
