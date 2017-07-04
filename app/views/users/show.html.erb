@@ -1,7 +1,7 @@
 <div class="container">
-    <%= @user.name%>のフォロー/フォロワー一覧
+
     <div class="row ">
-        <h2>フォロワー</h2>
+        <%= @user.name%>のフォロワー
             <% @user.followers.each do |user| %>
                 <%= render 'date', user: user %>
                 <%= render 'follow_form', user: user %>
@@ -10,7 +10,7 @@
     </div>
 
     <div class="row ">
-        <h2>フォーロー</h2>
+        <%= @user.name%>のフォーロー
             <% @user.followed_users.each do |user| %>
                 <%= render 'date', user: user %>
                 <%= render 'follow_form', user: user %>
