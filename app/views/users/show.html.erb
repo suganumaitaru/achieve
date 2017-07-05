@@ -3,7 +3,7 @@
     <div class="row ">
         <%= @user.name%>のフォロワー
             <% @user.followers.each do |user| %>
-                <%= render 'date', user: user %>
+                <%= render 'data', user: user %>
                 <br>
             <% end %>
     </div>
@@ -11,7 +11,7 @@
     <div class="row ">
         <%= @user.name%>のフォーロー
             <% @user.followed_users.each do |user| %>
-                <%= render 'date', user: user %>
+                <%= render 'data', user: user %>
                 <br>
             <% end %>
     </div>
