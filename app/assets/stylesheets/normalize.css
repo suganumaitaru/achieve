@@ -461,5 +461,6 @@ template {
 }
 
 img{
-  max-width: 100%;
+  width: 64px;
+  height: 64px;
 }
