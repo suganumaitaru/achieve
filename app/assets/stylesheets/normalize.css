@@ -461,6 +461,10 @@ template {
 }
 
 img{
+  max-width: 100%;
+}
+
+.profile_img{
   width: 64px;
   height: 64px;
 }
