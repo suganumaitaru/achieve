@@ -3,11 +3,12 @@
     <% @users.each do |user| %>
         <% unless current_user == user then %>
             <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
-                <div class="profile_img"> <%= profile_img(user) %> </div>
-                <%= user.email %>
+                <%= render 'data', user: user %>
                 <%= render 'follow_form', user: user %>
                 <%= link_to "ユーザー詳細", user_path(user.id) %>
             </div>
         <% end %>
     <% end %>
+
+
 </div>
