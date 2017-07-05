@@ -3,12 +3,14 @@
     <% @users.each do |user| %>
         <% unless current_user == user then %>
             <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
+                <%= user.name %>
                 <%= render 'data', user: user %>
-                <%= render 'follow_form', user: user %>
                 <%= link_to "ユーザー詳細", user_path(user.id) %>
+                <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
+                <%= render partial: 'follow_form', locals: { user: user } if signed_in?   %>
+                </li>
+
             </div>
         <% end %>
     <% end %>
-
-
 </div>
