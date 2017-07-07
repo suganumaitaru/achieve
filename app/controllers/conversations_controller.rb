@@ -1,10 +1,10 @@
 class ConversationsController < ApplicationController
 
-    before_action :authenticate_user! 
+    before_action :authenticate_user!
 
     def index
         @users = User.all
-        @conversation = Conversation.all
+        @conversations = Conversation.all
     end
 
     def create
