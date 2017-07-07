@@ -4,8 +4,9 @@
         <hr>
             <li>
                 <span>
-                    <!-- <% puts "未読" if notification.read  == false %>  -->
-                    <span><%= notification.read %></span>
+                    <% if (notification.read  == false) %>
+                        未読
+                    <% end %>
                 </span>
                 <p>
                     <%= notification.comment.user.try(:name) %>さんが
